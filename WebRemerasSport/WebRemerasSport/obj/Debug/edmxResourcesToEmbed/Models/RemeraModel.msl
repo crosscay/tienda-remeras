@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="remeras_dbModelStoreContainer" CdmEntityContainer="remeras_dbEntities">
+    <EntitySetMapping Name="remera">
+      <EntityTypeMapping TypeName="remeras_dbModel.remera">
+        <MappingFragment StoreEntitySet="remera">
+          <ScalarProperty Name="remera_id" ColumnName="remera_id" />
+          <ScalarProperty Name="nombre_remera" ColumnName="nombre_remera" />
+          <ScalarProperty Name="talla" ColumnName="talla" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
