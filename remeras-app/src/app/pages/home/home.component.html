@@ -1,0 +1,3 @@
+<app-navbar (resultadoBusqueda)="obtenerProductoFilter($event)"></app-navbar>
+<app-lista-productos *ngIf="visibleListado" (mostrarDetalle)="mostrarDetalle($event)" [ListadoProductos]="ListadoProducto"></app-lista-productos>
+<app-detalle-producto *ngIf="visibleDetalleProducto" [DetalleDelProducto]="productoDetalle"></app-detalle-producto>

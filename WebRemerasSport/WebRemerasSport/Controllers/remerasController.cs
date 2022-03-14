@@ -13,6 +13,7 @@ using WebRemerasSport.Models;
 
 namespace WebRemerasSport.Controllers
 {
+    [RoutePrefix("api/remeras")]
     public class remerasController : ApiController
     {
         private remeras_dbEntities db = new remeras_dbEntities();
@@ -21,6 +22,16 @@ namespace WebRemerasSport.Controllers
         public IQueryable<remera> Getremera()
         {
             return db.remera;
+        }
+
+        [ResponseType(typeof(remera))]
+        [HttpGet]
+        [Route("obtener-remeras/{name}")]
+        public IHttpActionResult GetFilterRemeras(string name/*, string talla, string precio*/)
+        {   
+            var listado = db.remera.Where(x => x.nombre_remera.Contains(name) || x.talla.Contains(name)).ToList();
+
+            return Ok(listado);
         }
 
         // GET: api/remeras/5

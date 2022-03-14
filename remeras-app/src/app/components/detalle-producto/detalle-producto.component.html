@@ -1,0 +1,22 @@
+<h1>Detalle Producto</h1>
+<hr>
+<div class="card" style="margin:auto; width: 50rem;">
+  <div class="card-body">
+    <!-- <img [src]="listadoMuertos[i].image" width="80%" alt=""> -->
+    <h5 class="card-title">{{ DetalleDelProducto.nombre_remera }}</h5>
+    <label for=""><strong>Talla:</strong> {{ DetalleDelProducto.talla }}</label>
+    <br>
+    <div class="row">
+      <div class="col-6">
+        <img style="display: block;" [src]="DetalleDelProducto.image" width="90%" alt="">
+      </div>
+      <div class="col-6">
+        <h5 class="card-title">Descripción:</h5>
+        <label for="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</label>
+        <label for=""> <strong>Precio:</strong> ${{ DetalleDelProducto.precio }}</label>
+        <br>
+        <button class="btn btn-info"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Comprar</button>
+      </div>
+    </div>
+  </div>
+</div>

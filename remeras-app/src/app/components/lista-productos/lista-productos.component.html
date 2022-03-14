@@ -1,0 +1,13 @@
+<h1>Remeras Deportivas</h1>
+<hr>
+<div *ngFor="let item of ListadoProductos | keyvalue  let i=index;"  class="card" style="margin:auto; width: 50rem;">
+  <div class="card-body">
+    <!-- <img [src]="listadoMuertos[i].image" width="80%" alt=""> -->
+    <h5 class="card-title">{{ListadoProductos[i].nombre_remera}}</h5>
+    <label for="">Talla: {{ ListadoProductos[i].talla }} - ${{ListadoProductos[i].precio}}</label>
+    <br>
+    <img style="float: right;" [src]="ListadoProductos[i].image" width="30%" alt="">
+    <label for="">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</label>
+    <a href="javascript:void(0);" (click)="mostrandoDetalle(ListadoProductos[i])">Ver Detalles</a>
+  </div>
+</div>
